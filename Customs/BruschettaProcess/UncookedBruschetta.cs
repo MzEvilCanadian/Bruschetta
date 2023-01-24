@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     class UncookedBruschetta : CustomItemGroup
     {
         public override string UniqueNameID => "UncookedBruschetta";
-        public override GameObject Prefab => Mod.TomatoChopped.Prefab;       // Filler line until graphics are made
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaBread");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
@@ -35,7 +35,7 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Result = Mod.CookedBread
             }
         };
-     /*   public override void OnRegister(GameDataObject gameDataObject)
+        public override void OnRegister(GameDataObject gameDataObject)
         {
             var materials = new Material[]
             {
@@ -44,11 +44,11 @@ namespace Bruschetta.Customs.BruschettaProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Bread");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Paper - Postit Yellow");
+            materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }
-     */
+     
     }
 }

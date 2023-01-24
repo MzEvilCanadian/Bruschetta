@@ -6,36 +6,44 @@ using UnityEngine;
 
 namespace Bruschetta.Customs.BruschettaProcess
 {
-    class PlatedBruschetta : CustomItemGroup
+    internal class AssembledBruschettaStage2 : CustomItemGroup
     {
-        public override string UniqueNameID => "Plated Bruschetta";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaPlated");
+        public override string UniqueNameID => "Bruschetta Stage 1";
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaStage2");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
-        public override ItemStorage ItemStorageFlags => ItemStorage.None;
-        public override Item DirtiesTo => Mod.ServingBoard;
-        public override Item DisposesTo => Mod.ServingBoard;
-        public override int MaxOrderSharers => 2;
-        public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
+        public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
+
+        public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
         {
-            new ItemGroup.ItemSet
+            new ItemGroup.ItemSet()
             {
                 Max = 1,
                 Min = 1,
-                Items = new List<Item>
+                Items = new List<Item>()
                 {
-                    Mod.AssembledBruschettaStage2
+                    Mod.AssembledBruschettaStage1
                 }
             },
-            new ItemGroup.ItemSet
+            new ItemGroup.ItemSet()
             {
                 Max = 1,
                 Min = 1,
-                Items = new List<Item>
+                Items = new List<Item>()
                 {
-                    Mod.ServingBoard
+                    Mod.TomatoChopped
+                }
+            },
+            new ItemGroup.ItemSet()
+            {
+                Max = 1,
+                Min = 1,
+                Items = new List<Item>()
+                {
+                    Mod.OnionChopped
                 }
             }
         };
+        
         public override void OnRegister(GameDataObject gameDataObject)
         {
             var materials = new Material[]
@@ -49,10 +57,11 @@ namespace Bruschetta.Customs.BruschettaProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Onion - Cooked");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Wood 1 - Dim");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObject (5)", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);
+
+            // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }
+        
     }
 }

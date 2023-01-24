@@ -1,7 +1,7 @@
-C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\obj\Debug\Bruschetta.csproj.AssemblyReference.cache
 C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\obj\Debug\Bruschetta.csproj.CoreCompileInputs.cache
 C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\bin\Debug\Bruschetta.dll.config
 C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\bin\Debug\Bruschetta.dll
 C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\bin\Debug\Bruschetta.pdb
 C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\obj\Debug\Bruschetta.dll
 C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\obj\Debug\Bruschetta.pdb
+C:\Users\Amber-PC2\source\repos\Bruschetta\Bruschetta\obj\Debug\Bruschetta.csproj.AssemblyReference.cache

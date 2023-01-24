@@ -42,7 +42,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customs\BruschettaProcess\AssembledBruschetta.cs" />
+    <Compile Include="Customs\BruschettaProcess\AssembledBruschettaStage2.cs" />
+    <Compile Include="Customs\BruschettaProcess\AssembledBruschettaStage1.cs" />
     <Compile Include="Customs\BruschettaProcess\BruschettaDish.cs" />
     <Compile Include="Customs\BruschettaProcess\BurntBruschetta.cs" />
     <Compile Include="Customs\BruschettaProcess\CookedBread.cs" />

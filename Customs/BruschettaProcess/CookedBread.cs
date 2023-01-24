@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     internal class CookedBread : CustomItem
     {
         public override string UniqueNameID => "CookedBread";
-        public override GameObject Prefab => Mod.OnionChopped.Prefab;       // Filler line until graphics are made
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaCooked");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;
@@ -24,22 +24,20 @@ namespace Bruschetta.Customs.BruschettaProcess
                 IsBad = true
             }
         };
-     /*   public override void OnRegister(GameDataObject gameDataObject)
+        public override void OnRegister(GameDataObject gameDataObject)
         {
             var materials = new Material[]
             {
-                MaterialUtils.GetExistingMaterial("Bread - Inside Cooked"),
-             };
+                MaterialUtils.GetExistingMaterial("Bread - Inside"),
+            };
             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Bread - Cooked");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Yellow");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Dark Green");
+            materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }
-     */
+     
     }
 }

@@ -19,11 +19,11 @@ namespace Bruschetta
     {
         internal const string MOD_ID = "Bruschetta";
         internal const string MOD_NAME = "Bruschetta";
-        internal const string MOD_VERSION = "0.0.2";
+        internal const string MOD_VERSION = "0.0.3";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
         internal const string PLATEUP_VERSION = "1.1.2";
 
-      //  public static AssetBundle bundle;
+        public static AssetBundle bundle;
 
         internal static Item ServingBoard => GetExistingGDO<Item>(ItemReference.ServingBoard);
         internal static Item BreadSlice => GetExistingGDO<Item>(ItemReference.BreadSlice);
@@ -42,7 +42,8 @@ namespace Bruschetta
         internal static Item BurntBruschetta => GetModdedGDO<Item, BurntBruschetta>();
         internal static Item CookedBread => GetModdedGDO<Item, CookedBread>();
         internal static ItemGroup UncookedBruschetta => GetModdedGDO<ItemGroup, UncookedBruschetta>();
-        internal static ItemGroup AssembledBruschetta => GetModdedGDO<ItemGroup, AssembledBruschetta>();
+        internal static ItemGroup AssembledBruschettaStage1 => GetModdedGDO<ItemGroup, AssembledBruschettaStage1>();
+        internal static ItemGroup AssembledBruschettaStage2 => GetModdedGDO<ItemGroup, AssembledBruschettaStage2>();
         internal static ItemGroup PlatedBruschetta => GetModdedGDO<ItemGroup, PlatedBruschetta>();
         internal static Dish BruschettaDish => GetModdedGDO<Dish, BruschettaDish>();
 
@@ -61,12 +62,13 @@ namespace Bruschetta
         public override void PostActivate(KitchenMods.Mod mod)
         {
             base.PostActivate(mod);
-            //    bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
+            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
             AddGameDataObject<BurntBruschetta>();
             AddGameDataObject<CookedBread>();
             AddGameDataObject<UncookedBruschetta>();
-            AddGameDataObject<AssembledBruschetta>();
+            AddGameDataObject<AssembledBruschettaStage1>();
+            AddGameDataObject<AssembledBruschettaStage2>();
             AddGameDataObject<PlatedBruschetta>();
             AddGameDataObject<BruschettaDish>();
 
