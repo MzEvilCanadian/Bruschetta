@@ -19,7 +19,7 @@ namespace Bruschetta
     {
         internal const string MOD_ID = "Bruschetta";
         internal const string MOD_NAME = "Bruschetta";
-        internal const string MOD_VERSION = "0.0.3";
+        internal const string MOD_VERSION = "1.0.0";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
         internal const string PLATEUP_VERSION = "1.1.2";
 

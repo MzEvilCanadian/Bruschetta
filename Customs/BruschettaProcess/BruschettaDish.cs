@@ -19,7 +19,8 @@ namespace Bruschetta.Dishes
             new Dish.MenuItem
             {
                 Item = Mod.PlatedBruschetta,
-                Phase = MenuPhase.Starter
+                Phase = MenuPhase.Starter,
+                Weight = 1
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
