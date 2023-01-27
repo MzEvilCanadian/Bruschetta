@@ -38,9 +38,9 @@ namespace Bruschetta.Dishes
             Mod.Knead
         };
 
-        public override IDictionary<Locale, string> LocalisedRecipe => new Dictionary<Locale, string>
+        public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Put oil on a bread slice then toast. Add chopped tomato and onion. Place on Serving Board. Serves multiple Customers" }
+            { Locale.English, "Put oil on a bread slice then toast. Add chopped tomato then chopped onion. Place on Serving Board. Serves multiple Customers" }
         };
         public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>
         {
