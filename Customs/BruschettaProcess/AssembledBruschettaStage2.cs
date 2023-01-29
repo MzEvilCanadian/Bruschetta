@@ -30,15 +30,6 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.TomatoChopped
-                }
-            },
-            new ItemGroup.ItemSet()
-            {
-                Max = 1,
-                Min = 1,
-                Items = new List<Item>()
-                {
                     Mod.OnionChopped
                 }
             }

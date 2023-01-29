@@ -19,9 +19,9 @@ namespace Bruschetta
     {
         internal const string MOD_ID = "Bruschetta";
         internal const string MOD_NAME = "Bruschetta";
-        internal const string MOD_VERSION = "1.0.0";
+        internal const string MOD_VERSION = "1.0.2";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
-        internal const string PLATEUP_VERSION = "1.1.2";
+        public const string MOD_GAMEVERSION = ">=1.1.3";
 
         public static AssetBundle bundle;
 
@@ -52,7 +52,7 @@ namespace Bruschetta
         public static void LogInfo(string _log) { Debug.Log($"[{MOD_NAME}] " + _log); }
         public static void LogInfo(object _log) { LogInfo(_log.ToString()); }
 
-        public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{PLATEUP_VERSION}", Assembly.GetExecutingAssembly())
+        public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{MOD_GAMEVERSION}", Assembly.GetExecutingAssembly())
         {
             string bundlePath = Path.Combine(new string[] { Directory.GetParent(Application.dataPath).FullName, "Mods", ModID });
 
