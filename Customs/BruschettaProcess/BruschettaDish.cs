@@ -18,24 +18,24 @@ namespace Bruschetta.Dishes
         {
             new Dish.MenuItem
             {
-                Item = Mod.PlatedBruschetta,
+                Item = Main.PlatedBruschetta,
                 Phase = MenuPhase.Starter,
                 Weight = 1
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
-            Mod.Flour,
-            Mod.Tomato,
-            Mod.Onion,
-            Mod.Oil,
-            Mod.ServingBoard
+            Main.Flour,
+            Main.Tomato,
+            Main.Onion,
+            Main.Oil,
+            Main.ServingBoard
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
-            Mod.Cook,
-            Mod.Chop,
-            Mod.Knead
+            Main.Cook,
+            Main.Chop,
+            Main.Knead
         };
 
         public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>

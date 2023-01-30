@@ -49,7 +49,7 @@
     <Compile Include="Customs\BruschettaProcess\CookedBread.cs" />
     <Compile Include="Customs\BruschettaProcess\PlatedBruschetta.cs" />
     <Compile Include="Customs\BruschettaProcess\UncookedBruschetta.cs" />
-    <Compile Include="Mod.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Registy\ILocalisedRecipeHolder.cs" />
     <Compile Include="Registy\ModDish.cs" />
     <Compile Include="Registy\ModRegistry.cs" />

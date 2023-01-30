@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     class BurntBruschetta : CustomItem
     {
         public override string UniqueNameID => "BurntBruschetta";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaBurnt");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BruschettaBurnt");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.OutsideRubbish;
 

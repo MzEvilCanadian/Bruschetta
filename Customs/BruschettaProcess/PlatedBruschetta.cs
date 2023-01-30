@@ -9,11 +9,11 @@ namespace Bruschetta.Customs.BruschettaProcess
     class PlatedBruschetta : CustomItemGroup
     {
         public override string UniqueNameID => "Plated Bruschetta";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaPlated");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BruschettaPlated");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
-        public override Item DirtiesTo => Mod.ServingBoard;
-        public override Item DisposesTo => Mod.ServingBoard;
+        public override Item DirtiesTo => Main.ServingBoard;
+        public override Item DisposesTo => Main.ServingBoard;
         public override int MaxOrderSharers => 2;
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
         {
@@ -23,7 +23,7 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 1,
                 Items = new List<Item>
                 {
-                    Mod.AssembledBruschettaStage2
+                    Main.AssembledBruschettaStage2
                 }
             },
             new ItemGroup.ItemSet
@@ -32,7 +32,7 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 1,
                 Items = new List<Item>
                 {
-                    Mod.ServingBoard
+                    Main.ServingBoard
                 }
             }
         };
@@ -47,11 +47,11 @@ namespace Bruschetta.Customs.BruschettaProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Tomato");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Onion - Cooked");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Wood 1 - Dim");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Onion - Cooked");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Wood - Barrel");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (5)", materials);
         }
     }

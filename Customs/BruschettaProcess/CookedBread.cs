@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     internal class CookedBread : CustomItem
     {
         public override string UniqueNameID => "CookedBread";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaCooked");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BruschettaCooked");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;
@@ -18,9 +18,9 @@ namespace Bruschetta.Customs.BruschettaProcess
         {
             new Item.ItemProcess
             {
-                Duration = 3,
-                Process = Mod.Cook,
-                Result = Mod.BurntBruschetta,
+                Duration = 5,
+                Process = Main.Cook,
+                Result = Main.BurntBruschetta,
                 IsBad = true
             }
         };
@@ -35,8 +35,6 @@ namespace Bruschetta.Customs.BruschettaProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
-
-            // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }
      
     }

@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     class UncookedBruschetta : CustomItemGroup
     {
         public override string UniqueNameID => "UncookedBruschetta";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaBread");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BruschettaBread");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
@@ -21,8 +21,8 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 2,
                 Items = new List<Item>()
                 {
-                    Mod.BreadSlice,
-                    Mod.OilIngredient
+                    Main.BreadSlice,
+                    Main.OilIngredient
                 }
             }
         };
@@ -31,8 +31,8 @@ namespace Bruschetta.Customs.BruschettaProcess
             new Item.ItemProcess
             {
                 Duration = 3,
-                Process = Mod.Cook,
-                Result = Mod.CookedBread
+                Process = Main.Cook,
+                Result = Main.CookedBread
             }
         };
         public override void OnRegister(GameDataObject gameDataObject)

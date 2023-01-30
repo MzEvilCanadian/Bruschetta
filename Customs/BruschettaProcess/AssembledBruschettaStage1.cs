@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     internal class AssembledBruschettaStage1 : CustomItemGroup
     {
         public override string UniqueNameID => "Bruschetta Stage 2";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaStage1");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BruschettaStage1");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
@@ -21,8 +21,8 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 2,
                 Items = new List<Item>()
                 {
-                    Mod.CookedBread,
-                    Mod.TomatoChopped
+                    Main.CookedBread,
+                    Main.TomatoChopped
                 }
             },
             new ItemGroup.ItemSet()
@@ -31,7 +31,7 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.TomatoChopped
+                    Main.TomatoChopped
                 }
             }
         };

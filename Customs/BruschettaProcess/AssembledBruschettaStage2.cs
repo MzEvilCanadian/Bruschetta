@@ -9,7 +9,7 @@ namespace Bruschetta.Customs.BruschettaProcess
     internal class AssembledBruschettaStage2 : CustomItemGroup
     {
         public override string UniqueNameID => "Bruschetta Stage 1";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BruschettaStage2");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BruschettaStage2");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
@@ -21,7 +21,7 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.AssembledBruschettaStage1
+                    Main.AssembledBruschettaStage1
                 }
             },
             new ItemGroup.ItemSet()
@@ -30,7 +30,7 @@ namespace Bruschetta.Customs.BruschettaProcess
                 Min = 1,
                 Items = new List<Item>()
                 {
-                    Mod.OnionChopped
+                    Main.OnionChopped
                 }
             }
         };
@@ -46,9 +46,9 @@ namespace Bruschetta.Customs.BruschettaProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Tomato");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Onion - Cooked");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Olive Oil Bottle");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Onion - Cooked");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
